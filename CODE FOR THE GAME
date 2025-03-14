@@ -1,0 +1,37 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class newagme {
+    public static void main(String[] args) {
+        Random random = new Random();
+        Scanner sc = new Scanner(System.in);
+        String playAgain="yes";
+
+        while(playAgain.equals("yes")) {
+            int attempts = 0;
+            int MAX_attempts = 100;
+            int number = random.nextInt(100) + 1;  // Generate random number between 1-100
+            System.out.println("Guess a number between 1 and 100:");
+
+            while (attempts < MAX_attempts) {
+
+                System.out.print("Enter your guess: ");
+                int guessed_no = sc.nextInt();
+
+                attempts = attempts + 1;
+
+                if (guessed_no == number) {
+                    System.out.println("Congratulations! You guessed the number in " + attempts + " attempts.");
+                    break;
+                } else if (guessed_no < number) {
+                    System.out.println("Too low");
+                } else {
+                    System.out.println("Too high");
+                }
+            }
+            System.out.println("Play again? (yes/no):");
+            playAgain= sc.next();
+        }
+
+    }
+}
