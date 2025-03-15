@@ -9,21 +9,21 @@ public class newagme {
 
         while(playAgain == 1) {
             int attempts = 0;
-            int MAX_attempts = 100;
-            int number = random.nextInt(100) + 1;  // Generate random number between 1-100
+            int MAXattempts = 100;
+            int N = random.nextInt(100) + 1;  // Generate random number between 1-100
             System.out.println("Guess a number between 1 and 100:");
 
-            while (attempts < MAX_attempts) {
+            while (attempts < MAXattempts) {
 
                 System.out.print("Enter your guess: ");
-                int guessed_no = sc.nextInt();
+                int guessedno = sc.nextInt();
 
                 attempts = attempts + 1;
 
-                if (guessed_no == number) {
+                if (guessedno == N) {
                     System.out.println("Congratulations! You guessed the number in " + attempts + " attempts.");
                     break;
-                } else if (guessed_no < number) {
+                } else if (guessedno < N) {
                     System.out.println("Too low");
                 } else {
                     System.out.println("Too high");
