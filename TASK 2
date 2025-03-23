@@ -1,0 +1,36 @@
+package com.company;
+import java.util.Scanner;
+
+public class task2 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter your marks in 3 sub OUT OFF 100");
+        System.out.print("Enter marks of English:");
+        int E= sc.nextInt();
+        System.out.print("Enter marks of Maths:");
+        int M= sc.nextInt();
+        System.out.print("Enter marks of science:");
+        int S= sc.nextInt();
+
+        int total=(E+M+S);
+        float avg=(float) (total)/3 ;
+
+        if(avg>=90){
+            System.out.println("Grade is A");
+        } else if (avg>=80) {
+            System.out.println("Grade is B");
+        } else if (avg>=70) {
+            System.out.println("Grade is C");
+        } else if (avg>=60) {
+            System.out.println("Grade is D");
+        } else if (avg>=40) {
+            System.out.println("Grade is E");
+        } else if (avg<40) {
+            System.out.println("Grade is F");
+            System.out.println("You have failed the exam,try again");
+        }
+        System.out.println("The total marks are " +total+ " Out of 300");
+        System.out.println("The avg percentage you got is:" +avg+ "%");
+    }
+}
